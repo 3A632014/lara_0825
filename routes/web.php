@@ -15,9 +15,24 @@ use App\Http\Controllers\PostController;
 
 Route::get('/', function () {
     return view('welcome');
+
+    //\App\Post::create([
+    //    'title' => 'test title',
+    //    'content' => 'test content',
+    //]);
+
+    $post = new \App\Post();
+    $post->title = 'test title';
+    $post->content = 'test content';
+    $post->save();
 });
 
 Route::get('posts',['as'=>'post.index','uses'=>'PostController@index']);
 Route::get('post',['as'=>'post.post','uses'=>'PostController@post']);
 Route::get('about',['as'=>'post.about','uses'=>'PostController@about']);
 Route::get('contact',['as'=>'post.contact','uses'=>'PostController@contact']);
+
+
+
+
+
