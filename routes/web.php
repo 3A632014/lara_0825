@@ -41,10 +41,17 @@ Route::get('/', function () {
     //    'content' => 'update content',
     //]);
 
-    $post = \App\Post::find(10);
-    $post->title = 'save title';
-    $post->content = 'save content';
-    $post->save();
+    //$post = \App\Post::find(10);
+    //$post->title = 'save title';
+    //$post->content = 'save content';
+    //$post->save();
+
+    //$post = \App\Post::find(1);
+    //$post -> delete();
+
+    //\App\Post::destroy(2);
+
+    //\App\Post::destroy(3,5,7);
 });
 
 Route::get('posts',['as'=>'post.index','uses'=>'PostController@index']);
